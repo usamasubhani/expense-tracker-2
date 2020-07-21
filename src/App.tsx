@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 
 // Components
 import NewTransaction from './components/NewTransaction'
+import TransactionsList from './components/TransactionsList';
+
+import { GlobalProvider } from './context/GlobalContext';
+// import AppReducer from './context/AppReducer';
 function App() {
+
   return (
-    <div className="App">
-      <NewTransaction />
-    </div>
+    <GlobalProvider>
+    {/* <AppContextProvider value={{transactions: state.transactions}}> */}
+      <div className="App">
+        <NewTransaction />
+        <TransactionsList />
+      </div>
+    </GlobalProvider>
   );
 }
 

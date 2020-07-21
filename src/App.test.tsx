@@ -2,12 +2,19 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import App from './App';
 import NewTransaction from './components/NewTransaction';
+import ReactDOM from 'react-dom';
 
 
-let documentBody: RenderResult;
+describe('<App />', () => {
 
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+  });
+});
 
 describe('<NewTransaction />', () => {
+  let documentBody: RenderResult;
   beforeEach(() => {
     documentBody = render(<NewTransaction />);
   });  
