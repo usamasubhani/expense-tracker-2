@@ -7,6 +7,7 @@ import TransactionsList from './components/TransactionsList';
 
 import { GlobalProvider } from './context/GlobalContext';
 import Balance from './components/Balance';
+import IncomeExpenses from './components/IncomeExpenses';
 // import AppReducer from './context/AppReducer';
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     {/* <AppContextProvider value={{transactions: state.transactions}}> */}
       <div className="App">
         <Balance />
+        <IncomeExpenses />
         <NewTransaction />
         <TransactionsList />
       </div>
