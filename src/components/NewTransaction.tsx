@@ -6,7 +6,7 @@ const NewTransaction = () => {
 
     // Local Context
     const [title, setTitle] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState();
     
     // Create transaction on form submit
     const onSubmit = (e: { preventDefault: () => void; }) => {
@@ -29,6 +29,7 @@ const NewTransaction = () => {
                 name="title"
                 placeholder="Title"
                 value={title}
+                required={true}
                 onChange={(e) => {setTitle(e.target.value)}}
                 />
                 
@@ -41,7 +42,8 @@ const NewTransaction = () => {
                 />
 
                 <button
-                className="btn">
+                className="btn"
+                data-testid="submit-button">
                     Add
                 </button>
             </form>
