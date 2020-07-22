@@ -9,7 +9,7 @@ export const Balance = () => {
     const balance = transactioAmounts.reduce((a, b) => (a + b), 0);
 
     return (
-        <div>
+        <div className="balance">
             <h4>Balance:</h4>
             <h1>${balance}</h1>
         </div>

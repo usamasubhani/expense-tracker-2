@@ -156,3 +156,7 @@ input[type='number'] {
     width: 300px;
   }
 }
+
+.balance {
+  text-align: center;
+}
