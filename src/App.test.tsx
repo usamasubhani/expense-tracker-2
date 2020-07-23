@@ -1,9 +1,7 @@
 import React from 'react';
-import { render, RenderResult, fireEvent, waitForDomChange } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
-import NewTransaction from './components/NewTransaction';
 import ReactDOM from 'react-dom';
-import TransactionsList from './components/TransactionsList';
 import Transaction from './components/Transaction';
 import Balance from './components/Balance';
 import IncomeExpenses from './components/IncomeExpenses';
@@ -19,7 +17,7 @@ describe('<App />', () => {
 });
 
 test('Shows transaction title and amount', async () => {
-  const {getByTestId, getByText, debug} = render(
+  const {getByText} = render(
     <Transaction id={1} title={"Test Title"} amount={666} />
   )
 
@@ -42,7 +40,7 @@ test('renders without crashing', () => {
 });
 
 test('Shows Income', () => {
-  const {getByText, debug} = render(
+  const {getByText} = render(
     <IncomeExpenses />
   )
 
@@ -52,7 +50,7 @@ test('Shows Income', () => {
 });
 
 test('Shows Expense', () => {
-  const {getByText, debug} = render(
+  const {getByText} = render(
     <IncomeExpenses />
   )
 

@@ -2,12 +2,7 @@ import React, { useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalContext'
 import { TransactionType } from '../Types';
-// import {TransactionType} from '../Types';
 
-type props = {
-    title: string;
-    amount: number;
-};
 
 const Transaction: React.FC<TransactionType> = ({id, title, amount}) => {
     const { deleteTransaction } = useContext(GlobalContext);
@@ -20,6 +15,6 @@ const Transaction: React.FC<TransactionType> = ({id, title, amount}) => {
             <button onClick={() => deleteTransaction(id)} className="delete-btn">x</button>
         </li>
     )   
-    }
+}
 
 export default Transaction; 
