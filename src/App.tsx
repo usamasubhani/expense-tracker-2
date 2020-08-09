@@ -9,8 +9,10 @@ import { GlobalProvider } from './context/GlobalContext';
 import Balance from './components/Balance';
 import IncomeExpenses from './components/IncomeExpenses';
 
+import { GetToken } from './FirebaseService';
 function App() {
 
+  GetToken();
   return (
     <GlobalProvider>
 
